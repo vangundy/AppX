@@ -1,0 +1,40 @@
+﻿@page "/public"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using AppX.Shared
+@using System.Net.Http
+@inject IHttpClientFactory HttpFactory
+
+<h1>Public message</h1>
+
+<p>This component demonstrates fetching public data from the server.</p>
+
+@if (message == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div>
+        @message.TheDate
+    </div>
+}
+
+@code {
+    private DateMessage message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            HttpClient httpClient = HttpFactory.CreateClient("NoAuth");
+            message = await httpClient.GetFromJsonAsync<DateMessage>("api/Public");
+            Console.WriteLine(message.TheDate.ToString());
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+
+}

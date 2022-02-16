@@ -1,0 +1,58 @@
+﻿@page "/private"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using AppX.Shared
+@using System.Security.Claims
+@attribute [Authorize]
+@inject IHttpClientFactory HttpFactory
+
+<h1>Private message</h1>
+
+<p>This component demonstrates fetching protected data from the server.</p>
+
+@if (message == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @message.Message
+    <table>
+        <tr>
+            <th>
+                Claims
+            </th>
+        </tr>
+        @foreach (var claim in user.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    ClaimsPrincipal user;
+    private ResponseMessage message;
+
+    [CascadingParameter] Task<AuthenticationState> AuthenticationState { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            HttpClient httpClient = HttpFactory.CreateClient("AppX.ServerAPI");
+            message = await httpClient.GetFromJsonAsync<ResponseMessage>("api/Private");
+            Console.WriteLine(message.Message);
+
+            user = (await AuthenticationState).User;
+
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+}
