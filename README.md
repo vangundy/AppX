@@ -1,5 +1,6 @@
 # AppX
-Demonstrate AAD B2C Sign Out Issue
+This is an ASP.NET Core Blazor WebAssembly hosted app secured with Azure Active Directory B2C.  It demonstrates an AAD B2C sign out issue.
+When users sign out they are automatically signed in when they return to the app.  They should be prompted to enter their credentials instead.
 
 *Reference*
 
