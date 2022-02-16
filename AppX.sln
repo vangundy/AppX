@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 16.0.0.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppX.Server", "Server\AppX.Server.csproj", "{8CE21BB2-0687-44B8-B31F-30CB2DEDB30E}"
 EndProject
@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppX.Shared", "Shared\AppX.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75014F9A-96DC-4F69-954B-F5A22DEFF8A1}"
 	ProjectSection(SolutionItems) = preProject
-		Login Logout Issue.mp4 = Login Logout Issue.mp4
+		Login Issue.mp4 = Login Issue.mp4
 	EndProjectSection
 EndProject
 Global
