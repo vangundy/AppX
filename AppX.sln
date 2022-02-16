@@ -1,12 +1,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32112.339
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 16.0.0.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppX.Server", "Server\AppX.Server.csproj", "{8CE21BB2-0687-44B8-B31F-30CB2DEDB30E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppX.Client", "Client\AppX.Client.csproj", "{7CCDDBAB-B1AD-4D23-9CB5-20C354DEA08A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppX.Shared", "Shared\AppX.Shared.csproj", "{06996386-356F-4D02-8FF6-0F2FEF01A7E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75014F9A-96DC-4F69-954B-F5A22DEFF8A1}"
+	ProjectSection(SolutionItems) = preProject
+		Login Logout Issue.mp4 = Login Logout Issue.mp4
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,20 +65,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99207DC9-949B-458F-A943-5ED456C1B3A0}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://landmarkdividend.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Server\\AppX.Server.csproj
-		SccProjectName1 = Server
-		SccLocalPath1 = Server
-		SccProjectUniqueName2 = Client\\AppX.Client.csproj
-		SccProjectName2 = Client
-		SccLocalPath2 = Client
-		SccProjectUniqueName3 = Shared\\AppX.Shared.csproj
-		SccProjectName3 = Shared
-		SccLocalPath3 = Shared
 	EndGlobalSection
 EndGlobal
