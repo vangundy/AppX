@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>AppX.Server-C169F35E-1ACF-426B-91D9-52E767603B2D</UserSecretsId>
   </PropertyGroup>
 
